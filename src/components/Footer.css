@@ -1,0 +1,56 @@
+footer {
+    width: 100%;
+    box-sizing: border-box; 
+    background-color: var(--primary);
+    font-family: var(--second-font);
+    font-size: .75rem;
+    color: var(--secondary);
+}
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+.links .socials {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.links .socials a{
+    color: var(--secondary);
+    padding: .5rem;
+}
+.socials a:hover {
+    color: var(--border);
+}
+.newsletter {
+    margin-right: 2rem;
+}
+.newsletter h4 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.newsletter input {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--body-text);
+    border-radius: 8px;
+    width: 250px;
+    max-width: 90%;
+    margin-right: .5rem;
+}
+.newsletter button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary);
+    color: var(--background);
+    border: 0.5px solid var(--body-text);
+    border-right: 4px solid var(--body-text);
+    border-bottom: 4px solid var(--body-text);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.newsletter button:hover {
+    background-color: var(--border);
+}
+.copyright {
+    display: flex;
+    margin-left: 1rem;
+}

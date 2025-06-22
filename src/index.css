@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+:root {
+  --main-font: 'Literata', serif;
+  --second-font: 'Sora', sans-serif;
+  --primary: #f45172;
+  --secondary: #2e4e3f;
+  --background: #f5f8f6;
+  --text: #333;
+  --body-text: #000;
+  --border: #527b63;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  line-height: 1.5;
+}

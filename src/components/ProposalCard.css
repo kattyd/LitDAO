@@ -1,0 +1,69 @@
+.proposal-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+.proposal-card:hover {
+    transform: translateY(-4px);
+}
+.proposal-card h4 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+.proposal-card p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+.proposal-card a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.proposal-card a:hover {
+    text-decoration: underline;
+}
+.proposal-card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.proposal-card button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+.vote-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.vote-buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.vote-buttons button:first-child {
+    background-color: #4caf50;
+    color: #fff;
+}
+.vote-buttons button:last-child {
+    background-color: #f44336;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .vote-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
