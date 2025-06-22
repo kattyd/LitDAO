@@ -26,7 +26,7 @@ function Navbar() {
                 <Link to="/">LitDAO</Link>
             </div>
             <ul className="nav-links">
-                <li><Link to="/">dashboard</Link></li>
+                <li><Link to="/dashboard">dashboard</Link></li>
                 <li><Link to="/create">create proposal</Link></li>
                 <li><Link to="#about">about</Link></li>
             </ul>

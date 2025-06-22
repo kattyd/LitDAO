@@ -4,20 +4,37 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home"
 import ProposalDetail from "./pages/ProposalDetail";
 import CreateProposal from "./pages/CreateProposal";
+import Dashboard from "./pages/Dashboard";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [walletConnected, setWalletConnected] = useState(false);
+  const [address, setAddress] = useState("");
+
   return (
     <Router>
-      <div className="app">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/proposal/:id" element={<ProposalDetail />} />
-          <Route path="/create" element={<CreateProposal />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              walletConnected={walletConnected}
+              setWalletConnected={setWalletConnected}
+              address={address}
+              setAddress={setAddress}
+            />
+          }
+        />
+        <Route path="/create" element={<CreateProposal />} />
+        <Route path="/proposal/:id" element={<ProposalDetail />} />
+        <Route
+          path="/dashboard"
+          element={<Dashboard walletConnected={walletConnected} />}
+        />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

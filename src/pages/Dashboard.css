@@ -1,0 +1,25 @@
+.dashboard {
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+.dashboard h3 {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    color: var(--body-text);
+}
+.dashboard-locked {
+    text-align: center;
+    margin: 5rem 1rem;
+    color: var(--body-text);
+}
+.dashboard-locked button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary);
+    color: var(--secondary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}

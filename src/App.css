@@ -6,3 +6,11 @@ html, body, #root {
   box-sizing: border-box;
   background-color: #f5f8f6;
 }
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}

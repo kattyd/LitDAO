@@ -1,16 +1,17 @@
 .create-proposal {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 2rem;
-    background-color: #f4fdf7;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    background-color: var(--primary);
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    border: solid 1px var(--secondary);
 }
 .create-proposal h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #2e4e3f;
     margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: var(--body-text);
+    text-align: center;
 }
 .create-proposal form {
     display: flex;
@@ -20,29 +21,41 @@
 .create-proposal input,
 .create-proposal textarea {
     padding: 0.75rem 1rem;
-    border: 1px solid #c9e3d4;
-    border-radius: 8px;
     font-size: 1rem;
+    border: 1px solid var(--body-text);
+    border-radius: 8px;
+    background-color: var(--background);
     resize: vertical;
-    background-color: #fff;
-    color: #333;
-}
-.create-proposal input:focus,
-.create-proposal textarea:focus {
-    outline: none;
-    border-color: #78ba9d;
-    box-shadow: 0 0 0 2px rgba(120, 186, 157, 0.2);
+    outline-color: var(--secondary);
 }
 .create-proposal button {
-    background-color: #2e4e3f;
-    color: #fff;
-    padding: 0.75rem;
-    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    background-color: var(--secondary);
     border: none;
     border-radius: 8px;
+    color: var(--background);
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 .create-proposal button:hover {
-    background-color: #3e6551;
+    background-color: var(--border);
+}
+
+@media (max-width: 600px) {
+    .create-proposal {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+    .create-proposal h2 {
+        font-size: 1.5rem;
+    }
+    .create-proposal input,
+    .create-proposal textarea {
+        font-size: 0.9rem;
+    }
+    .create-proposal button {
+        font-size: 0.9rem;
+    }
 }
