@@ -54,3 +54,27 @@ footer {
     display: flex;
     margin-left: 1rem;
 }
+
+@media (max-width: 768px) {
+    footer {
+        width: 100%;
+    }
+    .links {
+        display: inline-block;
+        justify-content: space-between;
+    }
+    .links .socials {
+        font-size: 1.5rem;
+        padding-left: 9.5rem;
+    }
+    .newsletter {
+        margin-right: 2rem;
+        padding-left: 5rem;
+    }
+    .newsletter button {
+        margin-top: 0.5rem;
+    }
+    .copyright {
+        width: 90%;
+    }
+}
