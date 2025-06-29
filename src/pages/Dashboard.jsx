@@ -21,15 +21,6 @@ function Dashboard({ walletConnected }) {
         },
     ]);
 
-    if (walletConnected) {
-        return (
-            <div className="dashboard-locked">
-                <h2>🔒 connect your wallet to view the dashboard</h2>
-                <button onClick={() => navigate("/")}>go back</button>
-            </div>
-        );
-    }
-
     return (
         <div className="dashboard">
             <h3>DAO treasury balance</h3>

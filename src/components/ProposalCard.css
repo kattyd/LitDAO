@@ -61,6 +61,28 @@
     color: #fff;
 }
 
+.protected-locked {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.protected-locked button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #d7f5e9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.protected-locked button:hover {
+  background-color: #c1eddc;
+}
+
+
 @media (max-width: 600px) {
     .vote-buttons {
         flex-direction: column;

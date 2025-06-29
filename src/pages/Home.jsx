@@ -1,13 +1,10 @@
-import { useState } from "react";
 import { FaWallet } from "react-icons/fa";
 import ProposalCard from "../components/ProposalCard";
-import useVotes from "../hooks/useVotes"; // ← for simulated vote logic
+import useVotes from "../hooks/useVotes";
 import "./Home.css";
+import { useState } from "react";
 
-function Home() {
-    const [walletConnected, setWalletConnected] = useState(false);
-    const [address, setAddress] = useState("");
-
+function Home({ walletConnected, address, connectWallet }) {
     const [proposals, setProposals] = useState([
         {
             id: 1,
@@ -23,36 +20,22 @@ function Home() {
         },
     ]);
 
-    const connectWallet = async () => {
-        if (window.ethereum) {
-            try {
-                const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-                setAddress(accounts[0]);
-                setWalletConnected(true);
-            } catch (err) {
-                console.error("Wallet connection failed", err);
-            }
-        } else {
-            alert("Please install MetaMask.");
-        }
-    };
-
     const handleVote = (proposalId, type) => {
         setProposals((prevProposals) =>
-        prevProposals.map((p) => {
-            if (p.id === proposalId) {
-                return {
-                    ...p,
-                    votes: {
-                        ...p.votes,
-                        [type]: p.votes[type] + 1,
-                    },
-                };
-            }
-            return p;
-        })
-    );
-  };
+            prevProposals.map((p) => {
+                if (p.id === proposalId) {
+                    return {
+                        ...p,
+                        votes: {
+                            ...p.votes,
+                            [type]: p.votes[type] + 1,
+                        },
+                    };
+                }
+                return p;
+            })
+        );
+    };
 
     return (
         <div className="home">
@@ -60,22 +43,22 @@ function Home() {
                 <div className="hero-text">
                     <h2>Welcome to <br />LitDAO</h2>
                     <p>Funding literature, libraries and literacy <br />with the power of crypto.</p>
-                <div className="hero-btn">
-                    {!walletConnected ? (
-                        <button onClick={connectWallet} className="wallet-btn">
-                            <FaWallet style={{ marginRight: "8px" }} />
-                            Connect Wallet
-                        </button>
-                    ) : (
-                        <p>Connected: {address.slice(0, 6)}...{address.slice(-4)}</p>
-                    )}
+                    <div className="hero-btn">
+                        {!walletConnected ? (
+                            <button onClick={connectWallet} className="wallet-btn">
+                                <FaWallet style={{ marginRight: "8px" }} />
+                                Connect Wallet
+                            </button>
+                        ) : (
+                            <p>Connected: {address.slice(0, 6)}...{address.slice(-4)}</p>
+                        )}
                     </div>
                 </div>
                 <img src="/assets/reading.png" alt="LitDAO" className="hero-image" />
             </section>
 
             <section className="info">
-                <h2>we are commited to the growth of literacy</h2>
+                <h2>we are committed to the growth of literacy</h2>
                 <p>no matter where you are in the world you can help</p>
             </section>
 
@@ -95,29 +78,6 @@ function Home() {
                     </div>
                 </div>
             </section>
-
-            {/* {!walletConnected ? (
-                <div className="connect-message">
-                    <p>Please connect your wallet to view DAO proposals and treasury.</p>
-                </div>
-            ) : (
-                <section className="dashboard">
-                    <h3>DAO Treasury Balance</h3>
-                    <p>Ξ 42.13 ETH</p>
-
-                    <h3>Active Proposals</h3>
-                    <div className="proposals">
-                        {proposals.map((proposal) => (
-                            <ProposalCard 
-                                key={proposal.id}
-                                proposal={proposal}
-                                walletConnected={walletConnected}
-                                onVote={handleVote}
-                            />
-                        ))}
-                    </div>
-                </section>
-            )} */}
         </div>
     );
 }

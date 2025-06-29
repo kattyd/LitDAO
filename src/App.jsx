@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home"
@@ -12,18 +13,36 @@ function App() {
   const [walletConnected, setWalletConnected] = useState(false);
   const [address, setAddress] = useState("");
 
+  const connectWallet = async () => {
+    if (window.ethereum) {
+      try {
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setAddress(accounts[0]);
+        setWalletConnected(true);
+      } catch (err) {
+        console.error("wallet connection failed", err);
+      }
+    } else {
+      alert("please install MetaMask.");
+    }
+  };
+
   return (
     <Router>
-      <Navbar />
+      <Navbar 
+        walletConnected={walletConnected} 
+        address={address}
+        connectWallet={connectWallet} />
       <Routes>
         <Route
           path="/"
           element={
             <Home
               walletConnected={walletConnected}
-              setWalletConnected={setWalletConnected}
               address={address}
-              setAddress={setAddress}
+              connectWallet={connectWallet}
             />
           }
         />
@@ -31,7 +50,11 @@ function App() {
         <Route path="/proposal/:id" element={<ProposalDetail />} />
         <Route
           path="/dashboard"
-          element={<Dashboard walletConnected={walletConnected} />}
+          element={
+            <ProtectedRoute walletConnected={walletConnected}>
+              <Dashboard walletConnected={walletConnected} />
+            </ProtectedRoute>
+          }
         />
       </Routes>
       <Footer />

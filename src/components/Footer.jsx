@@ -1,5 +1,5 @@
 import "./Footer.css"
-import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function Footer() {
     return (
@@ -14,6 +14,9 @@ function Footer() {
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noreferrer">
                         <FaLinkedin />
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                        <FaInstagram />
                     </a>
                 </div>
                 <div className="newsletter">
