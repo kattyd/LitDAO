@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -6,6 +8,7 @@ import Home from "./pages/Home"
 import ProposalDetail from "./pages/ProposalDetail";
 import CreateProposal from "./pages/CreateProposal";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
 import "./App.css";
 import { useState } from "react";
 
@@ -56,7 +59,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/about" element={<About />} />
       </Routes>
+      <ToastContainer />
       <Footer />
     </Router>
   );

@@ -2,9 +2,33 @@
     max-width: 960px;
     margin: 3rem auto;
     padding: 1rem;
+    font-family: var(--second-font);
 }
+
 .dashboard h3 {
-    margin-top: 2rem;
     font-size: 1.25rem;
-    color: var(--body-text);
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.dashboard p {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.proposals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .proposals {
+        grid-template-columns: 1fr;
+    }
 }

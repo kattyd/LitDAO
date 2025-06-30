@@ -21,6 +21,6 @@
 }
 
 .dashboard-locked button:hover {
-  background-color: #c1eddc;
-  color: #000;
+  background-color: #ee2f55;
+  color: var(--background);
 }

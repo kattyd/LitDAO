@@ -1,0 +1,15 @@
+
+.proposal-detail {
+    width: 50%;
+    max-width: 600px;
+    padding: 2rem;
+    margin-left: 20%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border);
+    font-family: var(--second-font);
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}

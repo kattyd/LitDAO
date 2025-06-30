@@ -1,87 +1,105 @@
 .proposal-card {
-    background-color: #f8f9fa;
-    border: 1px solid #e0e0e0;
+    background-color: var(--background);
+    border: 1px solid var(--border);
     padding: 1.5rem;
     border-radius: 10px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
+    margin-bottom: 1.5rem;
+    font-family: var(--second-font);
 }
+
 .proposal-card:hover {
     transform: translateY(-4px);
 }
+
 .proposal-card h4 {
-    margin-top: 0;
-    font-size: 1.25rem;
-    color: #333;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
 }
-.proposal-card p {
+
+.proposal-card .description {
+    font-size: 0.95rem;
+    color: var(--body-text);
+    margin-bottom: 0.8rem;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 6px;
+    overflow: hidden;
     margin: 0.5rem 0;
-    color: #555;
+    display: flex;
 }
-.proposal-card a {
-    color: #0077cc;
+
+.progress-bar .yes {
+    background-color: var(--secondary);
+}
+
+.progress-bar .no {
+    background-color: #ccc;
+}
+
+.vote-counts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--body-text);
+    margin-bottom: 0.5rem;
+}
+
+.view-link {
+    color: var(--secondary);
     text-decoration: none;
     font-weight: bold;
+    margin-bottom: 1rem;
+    display: inline-block;
 }
-.proposal-card a:hover {
+
+.view-link:hover {
     text-decoration: underline;
 }
-.proposal-card button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.proposal-card button:disabled {
-    background-color: #aaa;
-    cursor: not-allowed;
-}
+
 .vote-buttons {
     display: flex;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
 }
+
 .vote-buttons button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
 }
+
 .vote-buttons button:first-child {
     background-color: #4caf50;
-    color: #fff;
+    color: white;
 }
+
 .vote-buttons button:last-child {
     background-color: #f44336;
-    color: #fff;
+    color: white;
 }
 
-.protected-locked {
-  text-align: center;
-  padding: 5rem 2rem;
-  color: #333;
-  font-family: sans-serif;
+.vote-buttons button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
 }
 
-.protected-locked button {
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  background-color: #d7f5e9;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+.voted-status {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary);
 }
-
-.protected-locked button:hover {
-  background-color: #c1eddc;
-}
-
 
 @media (max-width: 600px) {
     .vote-buttons {

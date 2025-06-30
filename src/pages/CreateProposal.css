@@ -60,7 +60,7 @@
 }
 
 .create-proposal button:hover {
-    background-color: var(--hover);
+    background-color: #ee2f55;
 }
 
 @media (max-width: 600px) {

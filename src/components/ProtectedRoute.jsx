@@ -1,14 +1,16 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./ProtectedRoute.css";
 
 function ProtectedRoute({ walletConnected, children }) {
+
+    const navigate = useNavigate();
     
     if (!walletConnected) {
         return (
             <div className="dashboard-locked">
                 <h2>🔒 connect your wallet to view the dashboard</h2>
-                <button onClick={() => Navigate("/")}>go back</button>
+                <button onClick={() => navigate("/")}>go back</button>
             </div>
         );
     }

@@ -1,4 +1,5 @@
-import { FaBars, FaTimes, FaWallet } from "react-icons/fa";
+import { FaBars, FaTimes, FaWallet, FaRegCopy } from "react-icons/fa";
+import { toast } from "react-toastify";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -50,7 +51,23 @@ function Navbar({ walletConnected, address, connectWallet }) {
                         connect wallet
                     </button>
                 ) : (
-                    <p>connected: {address?.slice(0, 6)}...{address?.slice(-4)}</p>
+                    <p className="wallet-address">
+                        connected: {address?.slice(0, 6)}...{address?.slice(-4)}
+                        <FaRegCopy
+                            style={{ marginLeft: "6px", cursor: "pointer" }}
+                            title="Copy address"
+                            onClick={() => { 
+                                navigator.clipboard.writeText(address);
+                                toast.success("address copied to clipboard!", {
+                                    style: {
+                                       backgroundColor: "var(--background)",        // your custom background
+                                        color: "var(--secondary)",
+                                        icon: "📋",
+                                    },
+                                });
+                            }}
+                        />
+                    </p>
                 )}
             </div>
 

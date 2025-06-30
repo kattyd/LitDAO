@@ -10,7 +10,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 0 1rem;
+    padding: 0.3rem 1.5rem;
 }
 
 /* Logo styling */
@@ -61,8 +61,12 @@
     margin-left: 1rem;
 }
 .nav-btn:hover {
-    background-color: #ea234b;
+    background-color: #ee2f55;
 }
+.wallet-address {
+    color: var(--primary);
+}
+
 /* Hamburger icon */
 .hamburger {
     display: none;

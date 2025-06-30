@@ -67,14 +67,17 @@ function Home({ walletConnected, address, connectWallet }) {
                     <div className="features-card">
                         <h3>projects</h3>
                         <p>create investments early, find a team of enthusiasts to start building.</p>
+                        <img src="/assets/reading-side.png" alt="LitDAO" className="feature-image" />
                     </div>
                     <div className="features-card">
                         <h3>investments</h3>
                         <p>get votes on your projects and find investment easier than ever.</p>
+                        <img src="/assets/sitting-reading.png" alt="LitDAO" className="feature-image" />
                     </div>
                     <div className="features-card">
                         <h3>social</h3>
                         <p>learn from each other and get the best mentorship where you need</p>
+                        <img src="/assets/clumsy.png" alt="LitDAO" className="feature-image" />
                     </div>
                 </div>
             </section>

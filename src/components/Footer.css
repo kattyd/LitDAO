@@ -5,7 +5,7 @@ footer {
     font-family: var(--second-font);
     font-size: 0.875rem;
     color: var(--background);
-    padding: 2rem 1rem;
+    padding: 1.25rem 1rem; /* reduced from 2rem */
 }
 
 .links {
@@ -13,7 +13,7 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.25rem; /* reduced gap */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -21,7 +21,7 @@ footer {
 /* Socials Section */
 .links .socials {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem; /* slightly tighter */
     font-size: 1.5rem;
 }
 
@@ -39,14 +39,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.4rem; /* tighter */
     max-width: 100%;
 }
 
 .newsletter h4 {
     font-weight: bold;
     text-decoration: underline;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem; /* slightly less */
 }
 
 .newsletter form {
@@ -92,7 +92,7 @@ footer {
 .copyright {
     text-align: center;
     font-size: 0.75rem;
-    margin-top: 2rem;
+    margin-top: 1rem; /* reduced from 2rem */
     color: var(--background);
 }
 
