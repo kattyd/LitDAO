@@ -32,7 +32,7 @@ section {
 }
 .hero h2 {
     font-family: var(--second-font);
-    font-size: 4.5rem;
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
     color: var(--body-text);
     margin-bottom: 0.5rem;
 }
