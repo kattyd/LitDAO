@@ -8,13 +8,15 @@ function CreateProposal() {
     };
 
     return (
-        <div className="create-proposal">
-            <h2>create new proposal</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="proposal title" required />
-                <textarea placeholder="proposal description" required />
-                <button type="submit">submit proposal</button>
-            </form>
+        <div className="create-proposal-page">
+            <div className="create-proposal">
+                <h2>Create New Proposal</h2>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" placeholder="Proposal Title" required />
+                    <textarea placeholder="Proposal Description" rows="6" required />
+                    <button type="submit">Submit Proposal</button>
+                </form>
+            </div>
         </div>
     );
 }

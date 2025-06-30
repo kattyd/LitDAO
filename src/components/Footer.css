@@ -1,77 +1,131 @@
 footer {
     width: 100%;
-    box-sizing: border-box; 
-    background-color: var(--primary);
+    box-sizing: border-box;
+    background-color: var(--secondary);
     font-family: var(--second-font);
-    font-size: .75rem;
-    color: var(--secondary);
+    font-size: 0.875rem;
+    color: var(--background);
+    padding: 2rem 1rem;
 }
+
 .links {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+/* Socials Section */
 .links .socials {
-    padding: 1rem;
+    display: flex;
+    gap: 1rem;
     font-size: 1.5rem;
 }
-.links .socials a{
-    color: var(--secondary);
-    padding: .5rem;
+
+.links .socials a {
+    color: var(--background);
+    transition: color 0.3s ease;
 }
-.socials a:hover {
-    color: var(--border);
+
+.links .socials a:hover {
+    color: var(--primary);
 }
+
+/* Newsletter Section */
 .newsletter {
-    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-width: 100%;
 }
+
 .newsletter h4 {
     font-weight: bold;
     text-decoration: underline;
+    margin-bottom: 0.5rem;
 }
+
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
 .newsletter input {
     padding: 0.5rem 1rem;
-    border: 1px solid var(--body-text);
+    border: 1px solid var(--background);
     border-radius: 8px;
     width: 250px;
-    max-width: 90%;
-    margin-right: .5rem;
+    max-width: 100%;
+    background-color: transparent;
+    color: var(--background);
+    outline-color: var(--primary);
 }
+
+.newsletter input::placeholder {
+    color: var(--background);
+}
+
 .newsletter button {
     padding: 0.5rem 1rem;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: var(--background);
-    border: 0.5px solid var(--body-text);
-    border-right: 4px solid var(--body-text);
-    border-bottom: 4px solid var(--body-text);
+    border: 0.5px solid var(--background);
+    border-right: 4px solid var(--background);
+    border-bottom: 4px solid var(--background);
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-}
-.newsletter button:hover {
-    background-color: var(--border);
-}
-.copyright {
-    display: flex;
-    margin-left: 1rem;
+    transition: background-color 0.3s ease;
 }
 
+.newsletter button:hover {
+    background-color: #ea234b;
+    color: var(--background);
+}
+
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 2rem;
+    color: var(--background);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    footer {
-        width: 100%;
-    }
     .links {
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
+
     .links .socials {
+        justify-content: center;
         font-size: 1.5rem;
     }
+
     .newsletter {
-        margin-right: 2rem;
+        align-items: center;
     }
+
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter input,
     .newsletter button {
-        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 300px;
     }
+
     .copyright {
-        width: 90%;
+        width: 100%;
+        margin-top: 1.5rem;
     }
 }

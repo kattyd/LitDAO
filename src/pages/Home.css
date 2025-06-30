@@ -42,7 +42,7 @@ section {
     margin-bottom: 1.5rem;
 }
 .wallet-btn {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: #e6f0ec;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -57,7 +57,7 @@ section {
     cursor: pointer;
 }
 .wallet-btn:hover {
-    background-color: var(--border);
+    background-color: #ea234b;
 }
 .info {
     background-color: var(--primary);

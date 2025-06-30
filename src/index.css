@@ -4,11 +4,11 @@
   --main-font: 'Literata', serif;
   --second-font: 'Sora', sans-serif;
   --primary: #f45172;
-  --secondary: #2e4e3f;
+  --secondary: #0d1b2a;
   --background: #f5f8f6;
   --text: #333;
   --body-text: #000;
-  --border: #527b63;
+  --border:  #d9d9d9;     /* Card borders */
 }
 body {
   margin: 0;

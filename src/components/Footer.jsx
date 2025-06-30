@@ -26,8 +26,7 @@ function Footer() {
                 </div>
             </div>
                 <div className="copyright">
-                    made with by kattyd<br />
-                     © {new Date().getFullYear()} LitDAO. All rights reserved.
+                    LitDAO • Made with ❤️ by kattyd        © 2025 All Rights Reserved<br />
                 </div>
         </footer>
     );
